@@ -1,0 +1,62 @@
+
+/* Page Content Style */
+
+content {
+    display: flex;
+    flex-direction: column;
+    -ms-flex-direction: column;
+    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    align-items: center;
+    margin: 15px;
+}
+#title {
+    font-size: 32px;
+    font-weight: 600;
+    color: white;
+    text-shadow: 1.5px 1.5px 2px gray;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+container {
+    display: flex;
+    flex-direction: row;
+    -ms-flex-direction: row;
+    flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    background: #666;
+    border-radius: 15px;
+    padding: 5px;
+    margin: 15px;
+}
+#container-img {
+    width: 35%;
+    margin: 5px;
+    border-radius: 12px;
+    align-self: center;
+}
+#container-text {
+    color: #d2d2d2;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 400;
+}
+#container-text::first-letter {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+/* Customization */
+
+
+
+/* Constraints */
+
+@media only screen and (max-width: 830px) {
+    container {flex-direction: column; -ms-flex-direction: column;}
+    #container-img {width: 95%; height: 20%;}
+    #container-text {font-size: 17px;}
+}
+@media only screen and (max-height: 550px) {
+
+}

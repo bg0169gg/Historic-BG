@@ -1,0 +1,229 @@
+
+/* Default values and variables */
+
+:root {
+    --defaults-gray-text: #767676;
+
+    --website-name: Историк БГ;
+	-website-name-en: Historic BG;
+
+    --colorpalette-defaults-bg: #7d6f5f;
+    --colorpalette-defaults-header: #dbd0b1;
+    --colorpalette-defaults-button-fill: #ffce00;
+    --colorpalette-defaults-button-semifill: #ffce0088;
+    --colorpalette-defaults-button-hover: #ff8d00;
+    --colorpalette-defaults-button-semlihover: #ff8d0088;
+    --colorpalette-defaults-button-hover-shadow: #a85c0092;
+    --colorpalette-defaults-button-pressed: #ffa700;
+    
+    --animation-default: ease-out 300ms;
+    --text-animation-default: ease-out 450ms;
+
+    --homepage-category-bg: linear-gradient(to bottom, transparent, #00000088);
+
+    --category-1-cover: url(/res/images/error.png);
+    --category-2-cover: url(/res/images/category-2/cover.jpeg);
+    --category-3-cover: url(/res/images/error.png);
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, 'Segoe MDL2 Assets';
+}
+body {
+    width: 100%;
+    min-width: 370px;
+    position: absolute;
+    background: var(--colorpalette-defaults-bg);
+    overflow-x: hidden;
+}
+
+/* Page Content Style */
+
+top {
+    top: 0;
+    position: sticky;
+    z-index: 1;
+}
+header {
+    position: sticky;
+    width: 100%;
+    height: 70px;
+    padding: 15px;
+    display: flex;
+	display: -webkit-flex;
+    flex-direction: row;
+	-ms-flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+header left {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+header right {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+.header-headbar-toggle,
+.header-home-title,
+.header-social-links {
+    text-align: center;
+    align-items: center;
+    position: relative;
+    margin: 0 2px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+#header-headbar-toggle {
+    font-size: 32px;
+    width: 40px;
+    height: 40px;
+    margin: auto;
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+#header-home-title {
+    align-items: center;
+    display: flex;
+    flex-wrap: nowrap;
+    text-decoration: none;
+    padding: 5px;
+}
+#header-home-title i {
+    font-size: 21px;
+    margin-right: 5px;
+}
+#header-home-title p {
+    font-size: 18px;
+}
+#social-lnk {
+    align-items: center;
+    display: flex;
+    flex-wrap: nowrap;
+    text-decoration: none;
+    padding: 5px;
+    margin: 0 2px;
+}
+#social-lnk i {
+    font-size: 21px;
+}
+
+headbar {
+    background: var(--colorpalette-defaults-header);
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+    padding: 10px;
+}
+.headbar-details {
+    display: flex;
+    flex-direction: row;
+    a, p {
+        font-size: 12px;
+        color: var(--defaults-gray-text);
+        text-decoration: none;
+        margin: auto 3px;
+    }
+    a:hover {
+        color: #000000;
+    }
+}
+
+/* Personalization */
+
+top {
+    header {
+        background: linear-gradient(to bottom, #0000009e, transparent);
+        transition: var(--animation-default);
+    }
+}
+top:hover, .top-headbar-open {
+    header {
+        background: var(--colorpalette-defaults-header);
+        transition: var(--animation-default);
+        i, p{
+            color: #000000;
+        }
+    }
+}
+.headbar-open {
+    display: flex;
+    border-top: solid #00000030 1px;
+}
+
+#header-headbar-toggle,
+#header-home-title,
+#social-lnk {
+    background: transparent;
+    border: none;
+    border-radius: 8px;
+    color: #ffffff;
+    transition: var(--animation-default);
+}
+#header-headbar-toggle:hover,
+#header-home-title:hover,
+#social-lnk:hover {
+    background: var(--colorpalette-defaults-button-hover);
+    box-shadow: var(--colorpalette-defaults-button-hover-shadow) 2px 2px 2px;
+    border: none;
+    border-radius: 8px;
+    color: var(--defaults-gray-text);
+    transition: var(--animation-default);
+}
+
+/* Error Page */
+
+#WebErrorPage {
+    height: 100%;
+    background-color: #7f7f7f;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: center;
+}
+ErrorWindow {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    align-items: center;
+}
+#ErrorLogo {
+    width: 50%;
+}
+#ErrorTitle {
+    font-size: 48px;
+    font-weight: bold;
+}
+#ErrorText {
+    font-size: 24px;
+    font-weight: lighter;
+}
+#ErrorHomepage {
+    font-size: 18px;
+    font-weight: normal;
+    text-decoration: none;
+    color: #fff;
+    margin: 20px;
+    padding: 8px;
+    border-radius: 12px;
+    background-color: #5b5b5b;
+}

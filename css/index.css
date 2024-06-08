@@ -1,0 +1,110 @@
+
+/* Page Content Style */
+
+content {
+    display: block;
+}
+categories {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    margin: 0;
+    height: 100%;
+}
+.category-btn {
+    width: calc(100% / 3);
+    height: 80vh;
+    margin: 10px;
+    border-radius: 12px;
+    background-size: cover;
+    background-position: top center;
+}
+#cat1 {background-image: var(--category-1-cover);}
+#cat2 {background-image: var(--category-2-cover);}
+#cat3 {background-image: var(--category-3-cover);}
+#category-btn {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    border-radius: inherit;
+    height: 100%;
+    width: 100%;
+    justify-content: flex-end;
+    padding: 8px;
+    text-decoration: none;
+    h1 {
+        font-size: 36px;
+        font-weight: 400;
+        text-align: left;
+        margin: 5px;
+    }
+    #summary, #author {
+        margin: 5px;
+        font-weight: 400;
+        text-align: left;
+    }
+    #learnmore {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-size: 18px;
+        font-weight: 400;
+        background: var(--colorpalette-defaults-button-semifill);
+        border-radius: 6px;
+        padding: 4px;
+        margin: 5px;
+        width: fit-content;
+        i {
+            font-size: 20px;
+            margin: auto auto auto 5px;
+        }
+    }
+}
+
+/* Personalization */
+
+#category-btn {
+    background: transparent;
+    background: var(--homepage-category-bg);
+    transition: var(--animation-default);
+    color: #ffffff;
+    text-shadow: 2px 2px 5px black;
+    #summary, #author {
+        transition: var(--text-animation-default);
+        font-size: 0;
+    }
+    #learnmore {
+        transition: var(--animation-default);
+    }
+}
+#category-btn:hover {
+    backdrop-filter: blur(5px) brightness(85%);
+    transition: var(--animation-default);
+    #summary, #author {
+        transition: var(--text-animation-default);
+        font-size: 14px;
+    }
+    #learnmore:hover {
+        transition: var(--animation-default);
+        background: var(--colorpalette-defaults-button-semlihover);
+        box-shadow: 2px 2px 2px var(--colorpalette-defaults-button-hover-shadow);
+    }
+}
+
+/* Constraints */
+
+@media only screen and (max-width: 830px) {
+    categories {
+        flex-direction: column;
+    }
+    .category-btn {
+        width: inherit;
+    }
+    body {scrollbar-width: thin;}
+}
+@media only screen and (max-height: 550px) {
+    .category-btn {height: 70vh;}
+    #category-btn h1 {font-size: 24px;}
+}
