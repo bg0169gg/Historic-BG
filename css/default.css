@@ -22,8 +22,8 @@
     --homepage-category-bg: linear-gradient(to bottom, transparent, #00000088);
 
     --category-1-cover: url(/res/images/error.png);
-    --category-2-cover: url(/res/images/category-2/cover.jpeg);
-    --category-3-cover: url(/res/images/error.png);
+    --category-2-cover: url(/res/images/category-2/cover.jpg);
+    --category-3-cover: url(/res/images/category-3/cover.jpg);
 }
 * {
     padding: 0;
@@ -149,6 +149,21 @@ headbar {
 }
 
 /* Personalization */
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+    
+body {
+    animation: fadeInAnimation ease 850ms;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
 
 top {
     header {
