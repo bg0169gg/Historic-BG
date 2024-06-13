@@ -5,7 +5,7 @@
     --defaults-gray-text: #767676;
 
     --website-name: Историк БГ;
-	-website-name-en: Historic BG;
+	--website-name-en: Historic BG;
 
     --colorpalette-defaults-bg: #7d6f5f;
     --colorpalette-defaults-header: #dbd0b1;
@@ -21,7 +21,7 @@
 
     --homepage-category-bg: linear-gradient(to bottom, transparent, #00000088);
 
-    --category-1-cover: url(/res/images/error.png);
+    --category-1-cover: url(/res/images/category-1/cover.jpg); 
     --category-2-cover: url(/res/images/category-2/cover.jpg);
     --category-3-cover: url(/res/images/category-3/cover.jpg);
 }
